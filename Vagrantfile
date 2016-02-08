@@ -1,5 +1,5 @@
 $install = <<SCRIPT
-DEBIAN_FRONTEND=noninteractive && \
+DEBIAN_FRONTEND=noninteractive \
 curl -sL https://deb.nodesource.com/setup_4.x | bash - && \
 apt-get update && \
 apt-get install -y nodejs && \
@@ -12,8 +12,9 @@ npm install && cd .. && \
 chmod +x debian/autobake-deb-force-distribution.sh && \
 apt-get install -y cmake zlib1g-dev libjemalloc-dev chrpath dh-apparmor dpatch libaio-dev libboost-dev libjudy-dev libpam0g-dev libreadline-gplv2-dev libssl-dev libwrap0-dev gawk hardening-wrapper devscripts && \
 apt-get -y autoremove && \
-debian/autobake-deb-force-distribution.sh \
-
+debian/autobake-deb-force-distribution.sh && \
+wget http://download.jetbrains.com/cpp/CLion-144.3600.8.tar.gz && tar -xvzf CLion-144.3600.8.tar.gz && rm CLion-144.3600.8.tar.gz && \
+apt-get install xfce4 && apt-get install gedit \
 
 
 SCRIPT
@@ -64,7 +65,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   #
    config.vm.provider "virtualbox" do |vb|
      # Boot without headless mode
-#     vb.gui = true
+     vb.gui = true
   #
   #   # Use VBoxManage to customize the VM. For example to change memory:
   #   vb.customize ["modifyvm", :id, "--memory", "1024"]
