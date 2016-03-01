@@ -6,10 +6,10 @@ export DEBIAN_FRONTEND=noninteractive
 curl -sL https://deb.nodesource.com/setup_4.x | bash - && \
 echo 'oracle-java8-installer shared/accepted-oracle-license-v1-1 boolean true' | debconf-set-selections && \
 # Installing NodeJS
-apt-get install -y nodejs && \
+apt-get -y install nodejs && \
 \
 # Installing node-mariasql and dependencies
-apt-get install -y gcc g++ libncurses5-dev bison clang && \
+apt-get -y install gcc g++ libncurses5-dev bison clang && \
 mkdir -p /home/vagrant/Documents/workspace && cd $_ && \
 (if cd node-mariasql; then git pull; else git clone https://github.com/bperel/node-mariasql.git; fi) && cd node-mariasql && \
 npm install && cd .. && \
@@ -18,11 +18,11 @@ npm install && cd .. && \
 (if cd mariadb-10.0.21; then git pull origin mariadb-10.0.21; else git clone -b mariadb-10.0.21 --depth 1 https://github.com/mariadb/server mariadb-10.0.21; fi) && cd mariadb-10.0.21 && \
 (if [ ! -f debian/autobake-deb-force-distribution.sh ]; then sed 's/^dch/dch --force-distribution/' debian/autobake-deb.sh > debian/autobake-deb-force-distribution.sh; fi) && \
 chmod +x debian/autobake-deb-force-distribution.sh && \
-apt-get install -y cmake zlib1g-dev libjemalloc-dev chrpath dh-apparmor dpatch libaio-dev libboost-dev libjudy-dev libpam0g-dev libreadline-gplv2-dev libssl-dev libwrap0-dev gawk hardening-wrapper devscripts && \
+apt-get -y install cmake zlib1g-dev libjemalloc-dev chrpath dh-apparmor dpatch libaio-dev libboost-dev libjudy-dev libpam0g-dev libreadline-gplv2-dev libssl-dev libwrap0-dev gawk hardening-wrapper devscripts && \
 debian/autobake-deb-force-distribution.sh && \
 \
 # Installing the desktop environment
-apt-get install xfce4 && apt-get install gedit && \
+apt-get -y install xfce4 gedit && \
 \
 # Installing Java 8
 apt-get -y install python-software-properties && \
