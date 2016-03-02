@@ -2,6 +2,9 @@
 
 export DEBIAN_FRONTEND=noninteractive
 
+mariadb_version=mariadb-10.0.21
+clion_version=CLion-144.4199.17
+
 # Adding package sources for NodeJS and Java 8. The NodeJS script executes apt-get update as well
 curl -sL https://deb.nodesource.com/setup_4.x | bash - && \
 echo 'oracle-java8-installer shared/accepted-oracle-license-v1-1 boolean true' | debconf-set-selections && \
@@ -15,7 +18,7 @@ mkdir -p /home/vagrant/Documents/workspace && cd $_ && \
 npm install && cd .. && \
 \
 # Installing MariaSQL and dependencies, suppressing the warning issued by dch
-(if cd mariadb-10.0.21; then git pull origin mariadb-10.0.21; else git clone -b mariadb-10.0.21 --depth 1 https://github.com/mariadb/server mariadb-10.0.21; fi) && cd mariadb-10.0.21 && \
+(if cd ${mariadb_version}; then git pull origin ${mariadb_version}; else git clone -b ${mariadb_version} --depth 1 https://github.com/mariadb/server ${mariadb_version}; fi) && cd ${mariadb_version} && \
 (if [ ! -f debian/autobake-deb-force-distribution.sh ]; then sed 's/^dch/dch --force-distribution/' debian/autobake-deb.sh > debian/autobake-deb-force-distribution.sh; fi) && \
 chmod +x debian/autobake-deb-force-distribution.sh && \
 apt-get -y install cmake zlib1g-dev libjemalloc-dev chrpath dh-apparmor dpatch libaio-dev libboost-dev libjudy-dev libpam0g-dev libreadline-gplv2-dev libssl-dev libwrap0-dev gawk hardening-wrapper devscripts && \
@@ -34,4 +37,4 @@ apt-get -y install oracle-java8-installer && \
 apt-get -y autoremove && \
 \
 # Downloading CLion
-wget http://download.jetbrains.com/cpp/CLion-144.3600.8.tar.gz && tar -xvzf CLion-144.3600.8.tar.gz && rm CLion-144.3600.8.tar.gz \
+wget http://download.jetbrains.com/cpp/${clion_version}.tar.gz && tar -xvzf ${clion_version}.tar.gz && rm ${clion_version}.tar.gz \
