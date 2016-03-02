@@ -1,0 +1,16 @@
+TFS
+CVS
+org.jetbrains.plugins.sass
+org.jetbrains.plugins.stylus
+Subversion
+JavaScriptDebugger
+com.jetbrains.restClient
+PerforceDirectPlugin
+JSIntentionPowerPack
+org.coffeescript
+org.jetbrains.plugins.less
+hg4idea
+com.intellij.tasks
+JavaScript
+XPathView
+org.jetbrains.plugins.github

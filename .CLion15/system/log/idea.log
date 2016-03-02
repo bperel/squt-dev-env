@@ -1,0 +1,131 @@
+2016-03-02 11:39:42,359 [      0]   INFO -        #com.intellij.idea.Main - ------------------------------------------------------ IDE STARTED ------------------------------------------------------ 
+2016-03-02 11:39:42,361 [      2]   INFO -        #com.intellij.idea.Main - IDE: CLion (build #CL-144.3600.8, 02 Feb 2016 00:00) 
+2016-03-02 11:39:42,361 [      2]   INFO -        #com.intellij.idea.Main - OS: Linux (3.2.0-4-amd64, amd64) 
+2016-03-02 11:39:42,361 [      2]   INFO -        #com.intellij.idea.Main - JRE: 1.8.0_74-b02 (Oracle Corporation) 
+2016-03-02 11:39:42,361 [      2]   INFO -        #com.intellij.idea.Main - JVM: 25.74-b02 (Java HotSpot(TM) 64-Bit Server VM) 
+2016-03-02 11:39:42,372 [     13]   INFO -        #com.intellij.idea.Main - JVM Args: -agentlib:yjpagent-linux64=disablealloc,delay=10000,sessionname=CLion15 -Xbootclasspath/a:/home/vagrant/Documents/workspace/clion-144.3600.8/bin/../lib/boot.jar -Xss2m -Xms256m -Xmx2000m -XX:NewSize=128m -XX:MaxNewSize=128m -XX:ReservedCodeCacheSize=96m -XX:+UseConcMarkSweepGC -XX:SoftRefLRUPolicyMSPerMB=50 -ea -Dsun.io.useCanonCaches=false -Djava.net.preferIPv4Stack=true -XX:+HeapDumpOnOutOfMemoryError -XX:-OmitStackTraceInFastThrow -Dawt.useSystemAAFontSettings=lcd -Djb.vmOptionsFile=/home/vagrant/Documents/workspace/clion-144.3600.8/bin/clion64.vmoptions -XX:ErrorFile=/home/vagrant/java_error_in_CL_%p.log -XX:HeapDumpPath=/home/vagrant/java_error_in_CL.hprof -Djb.restart.code=88 -Didea.paths.selector=CLion15 -Didea.platform.prefix=CLion -Didea.no.jre.check=true 
+2016-03-02 11:39:42,373 [     14]   INFO -        #com.intellij.idea.Main - ext: /usr/lib/jvm/java-8-oracle/jre/lib/ext: [cldrdata.jar, zipfs.jar, dnsns.jar, sunjce_provider.jar, jaccess.jar, sunpkcs11.jar, sunec.jar, localedata.jar, meta-index, nashorn.jar, jfxrt.jar] 
+2016-03-02 11:39:42,373 [     14]   INFO -        #com.intellij.idea.Main - JNU charset: UTF-8 
+2016-03-02 11:39:42,529 [    170]   INFO -        #com.intellij.idea.Main - JNA library loaded (64-bit) in 156 ms 
+2016-03-02 11:39:45,767 [   3408]   INFO - llij.ide.plugins.PluginManager - Cannot find optional descriptor intellilang-js-support.xml 
+2016-03-02 11:39:45,883 [   3524]   INFO - llij.ide.plugins.PluginManager - Cannot find optional descriptor js-nashorn-support.xml 
+2016-03-02 11:39:49,970 [   7611]   INFO -        #com.jetbrains.cidr.cpp - Executing CMake: /home/vagrant/Documents/workspace/clion-144.3600.8/bin/cmake/bin/cmake -G "Unix Makefiles" /tmp/cmake_check_environment 
+2016-03-02 11:41:05,488 [  83129]   INFO - llij.ide.plugins.PluginManager - Cannot find optional descriptor plugin-intelliLang.xml 
+2016-03-02 11:41:07,128 [  84769]   INFO - .intellij.idea.IdeaApplication - WM detected: Xfwm4 
+2016-03-02 11:41:08,140 [  85781]   INFO - llij.ide.plugins.PluginManager - Cannot find optional descriptor plugin-intelliLang.xml 
+2016-03-02 11:41:08,616 [  86257]   INFO - llij.ide.plugins.PluginManager - Cannot find optional descriptor intellilang-js-support.xml 
+2016-03-02 11:41:08,684 [  86325]   INFO - llij.ide.plugins.PluginManager - Cannot find optional descriptor js-nashorn-support.xml 
+2016-03-02 11:41:09,943 [  87584]   INFO - llij.ide.plugins.PluginManager - Plugin 'CVS Integration' can't be loaded because: Plugin is disabled 
+2016-03-02 11:41:09,994 [  87635]   INFO - llij.ide.plugins.PluginManager - Plugin 'Perforce Integration' can't be loaded because: Plugin is disabled 
+2016-03-02 11:41:10,004 [  87645]   INFO - llij.ide.plugins.PluginManager - Plugin 'Subversion Integration' can't be loaded because: Plugin is disabled 
+2016-03-02 11:41:10,007 [  87648]   INFO - llij.ide.plugins.PluginManager - Plugin 'TFS Integration' can't be loaded because: Plugin is disabled 
+2016-03-02 11:41:10,012 [  87653]   INFO - llij.ide.plugins.PluginManager - Plugin 'XPathView + XSLT Support' can't be loaded because: Plugin is disabled 
+2016-03-02 11:41:10,014 [  87655]   INFO - llij.ide.plugins.PluginManager - Plugin 'JavaScript Support' can't be loaded because: Plugin is disabled 
+2016-03-02 11:41:10,016 [  87657]   INFO - llij.ide.plugins.PluginManager - Plugin 'JavaScript Intention Power Pack' can't be loaded because: Plugin is disabled 
+2016-03-02 11:41:10,018 [  87659]   INFO - llij.ide.plugins.PluginManager - Plugin 'Task Management' can't be loaded because: Plugin is disabled 
+2016-03-02 11:41:10,026 [  87667]   INFO - llij.ide.plugins.PluginManager - Plugin 'JavaScript Debugger' can't be loaded because: Plugin is disabled 
+2016-03-02 11:41:10,028 [  87669]   INFO - llij.ide.plugins.PluginManager - Plugin 'REST Client' can't be loaded because: Plugin is disabled 
+2016-03-02 11:41:10,030 [  87671]   INFO - llij.ide.plugins.PluginManager - Plugin 'hg4idea' can't be loaded because: Plugin is disabled 
+2016-03-02 11:41:10,032 [  87673]   INFO - llij.ide.plugins.PluginManager - Plugin 'CoffeeScript' can't be loaded because: Plugin is disabled 
+2016-03-02 11:41:10,035 [  87676]   INFO - llij.ide.plugins.PluginManager - Plugin 'GitHub' can't be loaded because: Plugin is disabled 
+2016-03-02 11:41:10,036 [  87677]   INFO - llij.ide.plugins.PluginManager - Plugin 'LESS support' can't be loaded because: Plugin is disabled 
+2016-03-02 11:41:10,042 [  87683]   INFO - llij.ide.plugins.PluginManager - Plugin 'SASS support' can't be loaded because: Plugin is disabled 
+2016-03-02 11:41:10,044 [  87685]   INFO - llij.ide.plugins.PluginManager - Plugin 'Stylus support' can't be loaded because: Plugin is disabled 
+2016-03-02 11:41:10,220 [  87861]   INFO - llij.ide.plugins.PluginManager - 25 plugins initialized in 2387 ms 
+2016-03-02 11:41:10,232 [  87873]   INFO - llij.ide.plugins.PluginManager - Loaded bundled plugins: CSS Support (144.SNAPSHOT), Git Integration (8.1), HTML Tools (2.0), IDEA CORE (144.SNAPSHOT), PyCharm Community Edition for CLion (144.3600.8), Remote Hosts Access (0.1), Terminal (0.1), YAML (144.SNAPSHOT) 
+2016-03-02 11:41:10,232 [  87873]   INFO - llij.ide.plugins.PluginManager - Loaded custom plugins: Markdown support (8.0.0.20160127) 
+2016-03-02 11:41:10,232 [  87873]   INFO - llij.ide.plugins.PluginManager - Disabled plugins: CVS Integration (11), CoffeeScript (2.0), GitHub (144.3600.8), JavaScript Debugger (1.0), JavaScript Intention Power Pack (0.9.4), JavaScript Support (1.0), LESS support (144.SNAPSHOT), Perforce Integration (2.0), REST Client (144.SNAPSHOT), SASS support (144.SNAPSHOT), Stylus support (999.999), Subversion Integration (1.1), TFS Integration (999.999), Task Management (1.0), XPathView + XSLT Support (4), hg4idea (10.0) 
+2016-03-02 11:41:12,291 [  89932]   INFO - ij.components.ComponentManager - com.intellij.openapi.components.impl.ServiceManagerImpl initialized in 527 ms 
+2016-03-02 11:41:12,539 [  90180]   INFO - ellij.vfs.persistent.FSRecords - Marking VFS as corrupted: '/home/vagrant/.CLion15/system/caches/names.dat' does not exist 
+2016-03-02 11:41:12,547 [  90188]   INFO - ellij.util.io.PagedFileStorage - lower=100; upper=500; buffer=10; max=1967 
+2016-03-02 11:41:12,792 [  90433]   INFO - ij.components.ComponentManager - com.intellij.openapi.vfs.newvfs.persistent.PersistentFSImpl initialized in 417 ms 
+2016-03-02 11:41:12,833 [  90474]   INFO - pl.local.NativeFileWatcherImpl - Starting file watcher: /home/vagrant/Documents/workspace/clion-144.3600.8/bin/fsnotifier64 
+2016-03-02 11:41:12,866 [  90507]   INFO - pl.local.NativeFileWatcherImpl - Native file watcher is operational. 
+2016-03-02 11:41:12,869 [  90510]   INFO - ij.components.ComponentManager - com.intellij.openapi.vfs.impl.local.LocalFileSystemImpl initialized in 494 ms 
+2016-03-02 11:41:12,925 [  90566]   INFO - ij.components.ComponentManager - com.intellij.openapi.vfs.PlatformVirtualFileManager initialized in 563 ms 
+2016-03-02 11:41:13,451 [  91092]   INFO - ij.components.ComponentManager - com.intellij.ultimate.UltimateVerifier initialized in 54 ms 
+2016-03-02 11:41:13,810 [  91451]   INFO - ij.components.ComponentManager - com.intellij.openapi.util.registry.RegistryState initialized in 358 ms 
+2016-03-02 11:41:13,846 [  91487]   INFO - ij.components.ComponentManager - com.intellij.configurationStore.StoreAwareProjectManager initialized in 27 ms 
+2016-03-02 11:41:15,593 [  93234]   INFO - ij.components.ComponentManager - com.intellij.openapi.fileTypes.impl.FileTypeManagerImpl initialized in 1746 ms 
+2016-03-02 11:41:15,638 [  93279]   INFO - ij.components.ComponentManager - com.intellij.openapi.fileEditor.impl.FileDocumentManagerImpl initialized in 33 ms 
+2016-03-02 11:41:15,743 [  93384]   INFO - ij.components.ComponentManager - com.intellij.openapi.editor.impl.EditorFactoryImpl initialized in 104 ms 
+2016-03-02 11:41:15,771 [  93412]   INFO - .history.utils.LocalHistoryLog - local history version mismatch (was: 0, expected: 6), rebuilding... 
+2016-03-02 11:41:15,772 [  93413]   INFO - .history.utils.LocalHistoryLog - FS has been rebuild, rebuilding local history... 
+2016-03-02 11:41:15,819 [  93460]   INFO - ij.components.ComponentManager - com.intellij.history.integration.LocalHistoryImpl initialized in 75 ms 
+2016-03-02 11:41:15,844 [  93485]   INFO - ij.components.ComponentManager - com.intellij.openapi.command.impl.UndoManagerImpl initialized in 25 ms 
+2016-03-02 11:41:16,029 [  93670]   INFO - ij.components.ComponentManager - com.intellij.ide.ui.laf.LafManagerImpl initialized in 177 ms 
+2016-03-02 11:41:16,051 [  93692]   INFO - ij.components.ComponentManager - com.intellij.diagnostic.PerformanceWatcher initialized in 22 ms 
+2016-03-02 11:41:16,083 [  93724]   INFO - ij.components.ComponentManager - com.intellij.openapi.application.Preloader initialized in 32 ms 
+2016-03-02 11:41:16,107 [  93748]   INFO - ij.components.ComponentManager - com.intellij.notification.impl.NotificationsConfigurationImpl initialized in 23 ms 
+2016-03-02 11:41:16,160 [  93801]   INFO - ij.components.ComponentManager - com.intellij.internal.statistic.persistence.UsageStatisticsPersistenceComponent initialized in 37 ms 
+2016-03-02 11:41:16,180 [  93821]   INFO - ij.components.ComponentManager - com.intellij.internal.statistic.persistence.ApplicationStatisticsPersistenceComponent initialized in 19 ms 
+2016-03-02 11:41:16,212 [  93853]   INFO - ij.components.ComponentManager - com.intellij.ide.ClipboardSynchronizer initialized in 31 ms 
+2016-03-02 11:41:16,223 [  93864]   INFO - ij.components.ComponentManager - com.intellij.openapi.util.FoundationLoader initialized in 11 ms 
+2016-03-02 11:41:16,262 [  93903]   INFO - ij.components.ComponentManager - com.intellij.notification.EventLog initialized in 38 ms 
+2016-03-02 11:41:16,334 [  93975]   INFO - ij.components.ComponentManager - com.intellij.util.net.HttpConfigurable initialized in 60 ms 
+2016-03-02 11:41:16,673 [  94314]   INFO - ij.components.ComponentManager - com.intellij.openapi.keymap.impl.KeymapManagerImpl initialized in 578 ms 
+2016-03-02 11:41:16,697 [  94338]   INFO - ij.components.ComponentManager - com.intellij.ide.impl.DataManagerImpl initialized in 22 ms 
+2016-03-02 11:41:17,929 [  95570]   INFO - ij.components.ComponentManager - com.intellij.util.net.ssl.CertificateManager initialized in 1594 ms 
+2016-03-02 11:41:17,950 [  95591]   INFO - ij.components.ComponentManager - com.intellij.ide.SystemHealthMonitor initialized in 21 ms 
+2016-03-02 11:41:17,964 [  95605]   INFO - ij.components.ComponentManager - com.intellij.internal.DebugAttachDetector initialized in 13 ms 
+2016-03-02 11:41:18,080 [  95721]   INFO - ij.components.ComponentManager - com.intellij.diagnostic.DebugLogManager initialized in 116 ms 
+2016-03-02 11:41:18,115 [  95756]   INFO - ij.components.ComponentManager - com.intellij.openapi.actionSystem.impl.ActionManagerImpl initialized in 2021 ms 
+2016-03-02 11:41:18,128 [  95769]   INFO - ij.components.ComponentManager - com.intellij.openapi.editor.impl.EditorLastActionTrackerImpl initialized in 47 ms 
+2016-03-02 11:41:18,148 [  95789]   INFO - ij.components.ComponentManager - org.jetbrains.ide.BuiltInServerManagerImpl initialized in 19 ms 
+2016-03-02 11:41:18,171 [  95812]   INFO - ij.components.ComponentManager - com.intellij.ide.SwingCleanuper initialized in 22 ms 
+2016-03-02 11:41:18,409 [  96050]   INFO - rains.ide.BuiltInServerManager - built-in server started, port 63342 
+2016-03-02 11:41:18,422 [  96063]   INFO - ij.components.ComponentManager - com.intellij.openapi.wm.impl.WindowManagerImpl initialized in 200 ms 
+2016-03-02 11:41:18,476 [  96117]   INFO - ij.components.ComponentManager - com.intellij.openapi.wm.impl.FocusManagerImpl initialized in 305 ms 
+2016-03-02 11:41:18,626 [  96267]   INFO - ij.components.ComponentManager - com.intellij.ide.IdeTooltipManager initialized in 149 ms 
+2016-03-02 11:41:18,638 [  96279]   INFO - ij.components.ComponentManager - com.intellij.openapi.actionSystem.impl.MouseGestureManager initialized in 11 ms 
+2016-03-02 11:41:18,686 [  96327]   INFO - ij.components.ComponentManager - com.intellij.ide.FrameStateManagerImpl initialized in 20 ms 
+2016-03-02 11:41:18,721 [  96362]   INFO - ij.components.ComponentManager - com.intellij.ide.SaveAndSyncHandlerImpl initialized in 81 ms 
+2016-03-02 11:41:18,788 [  96429]   INFO - ij.components.ComponentManager - com.intellij.ui.switcher.QuickAccessSettings initialized in 56 ms 
+2016-03-02 11:41:18,833 [  96474]   INFO - gs.impl.UpdateCheckerComponent - channel: release 
+2016-03-02 11:41:18,835 [  96476]   INFO - gs.impl.UpdateCheckerComponent - channel forced to 'eap' 
+2016-03-02 11:41:18,872 [  96513]   INFO - ij.components.ComponentManager - com.intellij.openapi.updateSettings.impl.UpdateCheckerComponent initialized in 83 ms 
+2016-03-02 11:41:18,903 [  96544]   INFO - ij.components.ComponentManager - com.intellij.ui.switcher.SwitchManagerAppComponent initialized in 23 ms 
+2016-03-02 11:41:18,932 [  96573]   INFO - ij.components.ComponentManager - com.intellij.ide.actionMacro.ActionMacroManager initialized in 29 ms 
+2016-03-02 11:41:19,039 [  96680]   INFO - ij.components.ComponentManager - com.intellij.openapi.actionSystem.ex.QuickListsManager initialized in 106 ms 
+2016-03-02 11:41:19,065 [  96706]   INFO - ij.components.ComponentManager - com.intellij.openapi.vcs.changes.VetoSavingCommittingDocumentsAdapter initialized in 23 ms 
+2016-03-02 11:41:19,086 [  96727]   INFO - ij.components.ComponentManager - com.intellij.openapi.vcs.changes.VcsDirtyScopeVfsListener initialized in 20 ms 
+2016-03-02 11:41:19,099 [  96740]   INFO - ij.components.ComponentManager - com.intellij.lifecycle.PeriodicalTasksCloser initialized in 12 ms 
+2016-03-02 11:41:19,186 [  96827]   INFO - ij.components.ComponentManager - com.intellij.execution.ExecutorRegistryImpl initialized in 32 ms 
+2016-03-02 11:41:19,372 [  97013]   INFO - ij.components.ComponentManager - com.intellij.openapi.vcs.changes.actions.migrate.MigrateDiffApplicationComponent initialized in 272 ms 
+2016-03-02 11:41:19,385 [  97026]   INFO - ij.components.ComponentManager - com.intellij.openapi.fileEditor.impl.text.PsiAwareTextEditorProvider initialized in 13 ms 
+2016-03-02 11:41:19,485 [  97126]   INFO - ij.components.ComponentManager - com.intellij.formatting.FormatterImpl initialized in 100 ms 
+2016-03-02 11:41:20,032 [  97673]   INFO - ij.components.ComponentManager - com.intellij.psi.stubs.SerializationManagerImpl initialized in 546 ms 
+2016-03-02 11:41:24,808 [ 102449]   INFO - ij.components.ComponentManager - com.intellij.util.indexing.FileBasedIndexImpl initialized in 5322 ms 
+2016-03-02 11:41:25,228 [ 102869]   INFO - ij.components.ComponentManager - com.intellij.psi.stubs.StubIndexImpl initialized in 409 ms 
+2016-03-02 11:41:25,257 [ 102898]   INFO - ij.components.ComponentManager - com.intellij.tools.ToolManager initialized in 28 ms 
+2016-03-02 11:41:25,626 [ 103267]   INFO - ij.components.ComponentManager - com.intellij.openapi.roots.impl.libraries.LibraryKindLoader initialized in 369 ms 
+2016-03-02 11:41:25,702 [ 103343]   INFO - ij.components.ComponentManager - com.intellij.codeInsight.preview.ImageOrColorPreviewManager initialized in 75 ms 
+2016-03-02 11:41:25,901 [ 103542]   INFO - ij.components.ComponentManager - com.intellij.ide.script.IdeStartupScripts initialized in 198 ms 
+2016-03-02 11:41:25,920 [ 103561]   INFO - ij.components.ComponentManager - com.intellij.platform.PlatformProjectStarter initialized in 18 ms 
+2016-03-02 11:41:26,101 [ 103742]   INFO - ij.components.ComponentManager - com.intellij.ide.EvaluationSupport initialized in 176 ms 
+2016-03-02 11:41:26,303 [ 103944]   INFO - ij.components.ComponentManager - org.intellij.plugins.relaxNG.ApplicationLoader initialized in 201 ms 
+2016-03-02 11:41:26,377 [ 104018]   INFO - ij.components.ComponentManager - com.intellij.codeInsight.editorActions.XmlTagNameSynchronizer initialized in 36 ms 
+2016-03-02 11:41:27,486 [ 105127]   INFO - ij.components.ComponentManager - com.jetbrains.cidr.lang.dfa.contextSensitive.OCSourceGliderComponent initialized in 1108 ms 
+2016-03-02 11:41:27,533 [ 105174]   INFO - ij.components.ComponentManager - com.jetbrains.cidr.lang.actions.OCActionsManager initialized in 46 ms 
+2016-03-02 11:41:27,787 [ 105428]   INFO - ij.components.ComponentManager - com.intellij.internal.statistic.updater.SendStatisticsComponent initialized in 254 ms 
+2016-03-02 11:41:27,866 [ 105507]   INFO - ij.components.ComponentManager - com.jetbrains.python.testing.VFSTestFrameworkListener initialized in 78 ms 
+2016-03-02 11:41:27,876 [ 105517]   INFO - plication.impl.ApplicationImpl - 75 application components initialized in 20067 ms 
+2016-03-02 11:41:28,414 [ 106055]   INFO - .intellij.idea.IdeaApplication - App initialization took 114707 ms 
+2016-03-02 11:41:31,386 [ 109027]   INFO - ij.components.ComponentManager - com.intellij.openapi.components.impl.ServiceManagerImpl initialized in 250 ms 
+2016-03-02 11:41:32,712 [ 110353]   INFO - ij.components.ComponentManager - com.intellij.openapi.vcs.impl.FileStatusManagerImpl initialized in 1315 ms 
+2016-03-02 11:41:32,833 [ 110474]   INFO - ij.components.ComponentManager - com.intellij.openapi.roots.impl.ProjectRootManagerComponent initialized in 64 ms 
+2016-03-02 11:41:32,908 [ 110549]   INFO - ij.components.ComponentManager - com.intellij.psi.impl.PsiManagerImpl initialized in 167 ms 
+2016-03-02 11:41:32,934 [ 110575]   INFO - ij.components.ComponentManager - com.intellij.psi.impl.PsiDocumentManagerImpl initialized in 212 ms 
+2016-03-02 11:41:32,989 [ 110630]   INFO - ij.components.ComponentManager - com.intellij.openapi.vfs.encoding.EncodingProjectManagerImpl initialized in 275 ms 
+2016-03-02 11:41:33,025 [ 110666]   INFO - ij.components.ComponentManager - com.intellij.openapi.module.impl.ModuleManagerComponent initialized in 18 ms 
+2016-03-02 11:41:33,107 [ 110748]   INFO - ij.components.ComponentManager - com.intellij.openapi.vcs.impl.ProjectLevelVcsManagerImpl initialized in 117 ms 
+2016-03-02 11:41:33,121 [ 110762]   INFO - ij.components.ComponentManager - com.intellij.pom.tree.TreeAspect initialized in 14 ms 
+2016-03-02 11:41:33,163 [ 110804]   INFO - ij.components.ComponentManager - com.intellij.codeInsight.daemon.impl.EditorTracker initialized in 12 ms 
+2016-03-02 11:41:33,229 [ 110870]   INFO - ij.components.ComponentManager - com.intellij.codeInsight.daemon.impl.DaemonCodeAnalyzerImpl initialized in 97 ms 
+2016-03-02 11:41:33,319 [ 110960]   INFO - ij.components.ComponentManager - com.intellij.profile.codeInspection.InspectionProjectProfileManagerImpl initialized in 89 ms 
+2016-03-02 11:41:33,505 [ 111146]   INFO - ij.components.ComponentManager - com.intellij.execution.impl.RunManagerImpl initialized in 185 ms 
+2016-03-02 11:41:33,550 [ 111191]   INFO - ij.components.ComponentManager - com.jetbrains.cidr.cpp.cmake.workspace.CMakeWorkspace initialized in 44 ms 
+2016-03-02 11:41:33,550 [ 111191]   INFO - ellij.project.impl.ProjectImpl - 17 project components initialized in 3105 ms 
+2016-03-02 11:41:33,553 [ 111194]   INFO - le.impl.ModuleManagerComponent - 0 module(s) loaded in 0 ms 
+2016-03-02 11:41:35,036 [ 112677]   INFO - .openapi.application.Preloader - Finished preloading com.intellij.openapi.actionSystem.impl.ActionPreloader@6c5e4eef 
+2016-03-02 11:41:36,807 [ 114448]   INFO - .openapi.application.Preloader - Finished preloading com.intellij.ide.ui.search.SearchableOptionPreloader@7a48b87e 

@@ -45,9 +45,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
    config.vm.provider "virtualbox" do |vb|
      # Boot without headless mode
      vb.gui = true
-  #
-  #   # Use VBoxManage to customize the VM. For example to change memory:
-  #   vb.customize ["modifyvm", :id, "--memory", "1024"]
+     vb.customize ["modifyvm", :id, "--memory", "1024"]
    end
   #
   # View the documentation for the provider you're using for more
@@ -118,5 +116,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   #   chef.validation_client_name = "ORGNAME-validator"
 #  config.ssh.password = "squt_env"
   config.vm.provision "shell", path: "install.sh"
+  config.vm.provision "file", source: ".CLion15", destination: "/home/vagrant/"
+
 
 end
