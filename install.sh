@@ -24,16 +24,13 @@ debian/autobake-deb-force-distribution.sh && \
 # Installing the desktop environment
 apt-get -y install xfce4 gedit && \
 \
-# Installing Java 8
-apt-get -y install python-software-properties && \
-add-apt-repository -y ppa:webupd8team/java && \
+# Installing Java 8 and other CLion dependencies
 echo debconf shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-selections && \
-apt-get -y install oracle-java8-installer && \
-\
-# Installing CLion dependencies, cleaning up
 apt-get -y install python-software-properties && \
-add-apt-repository -y ppa:webupd8team/java && \
+printf 'deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main\n\
+deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main' >> webupd8team-java.list && \
 apt-get -y install oracle-java8-installer && \
+# Cleaning up
 apt-get -y autoremove && \
 \
 # Downloading CLion
