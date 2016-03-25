@@ -45,7 +45,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
    config.vm.provider "virtualbox" do |vb|
      # Boot without headless mode
      vb.gui = true
-     vb.customize ["modifyvm", :id, "--memory", "1024"]
+     vb.customize ["modifyvm", :id, "--memory", "2048"]
+     vb.customize ["modifyvm", :id, "--cpus", "4"]
    end
   #
   # View the documentation for the provider you're using for more
