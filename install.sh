@@ -51,7 +51,7 @@ apt-get -y install gcc g++ libncurses5-dev bison clang && \
 ) && \
 \
 # Installing desktop environment
-apt-get -y install xfce4 gedit && \
+apt-get -y install gnome-desktop-environment gedit && \
 \
 # Installing Java 8 and other CLion dependencies
 echo debconf shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-selections && \
