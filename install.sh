@@ -70,4 +70,6 @@ apt-get -y autoremove && \
 	tar -xvzf ${clion_version}.tar.gz && \
 	chown vagrant:vagrant ${clion_version} && \
 	rm ${clion_version}.tar.gz; \
-fi)
+ ); \
+fi  \
+)
