@@ -2,6 +2,9 @@
 A Vagrant box to setup the environment necessary for next-gen squt development
 
 # How to install
+
+You can put in ```/ide-archives``` the CLion .tar.gz previously downloaded from JetBrains.
+
 ```bash
 vagrant plugin install vagrant-vbguest
 vagrant up

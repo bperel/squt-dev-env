@@ -119,6 +119,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 #  config.ssh.password = "squt_env"
   config.vm.provision "shell", path: "install.sh"
   config.vm.provision "file", source: ".CLion15", destination: "/home/vagrant/"
+  config.vm.provision "file", source: "ide-archive", destination: "/home/vagrant/"
 
 
 end
