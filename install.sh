@@ -5,7 +5,6 @@ su - vagrant
 
 export DEBIAN_FRONTEND=noninteractive
 
-mariadb_version=mariadb-10.0.21
 clion_version=CLion-2016.1-1
 
 touch /home/vagrant/.bash_profile && \
@@ -28,15 +27,18 @@ apt-get -y install gcc g++ libncurses5-dev bison clang && \
    else git clone https://github.com/bperel/node-mariasql.git; \
   fi \
  ) && \
- chown vagrant:vagrant -R node-mariasql
+ chown vagrant:vagrant -R node-mariasql && \
  (cd node-mariasql && npm install) && \
+ \
+ # Fetching the MariaDB server version from node-mariasql dependencies
+ mariadb_version=mariadb-`cut -d'=' -f2 node-mariasql/deps/libmariadbclient/VERSION | tr '\n' '.' | sed 's/\.\+$//'` && \
  \
  # Installing MariaSQL's dependencies
  apt-get -y install cmake zlib1g-dev libjemalloc-dev chrpath dh-apparmor dpatch libaio-dev libboost-dev libjudy-dev libpam0g-dev libreadline-gplv2-dev libssl-dev libwrap0-dev gawk hardening-wrapper devscripts && \
  # Installing MariaSQL and dependencies, suppressing the warning issued by dch
  ( \
   if [ -d ${mariadb_version} ]; \
-   then (cd ${mariadb_version} && git pull origin ${mariadb_version}); \
+   then (`pwd` && cd ${mariadb_version} && git pull origin ${mariadb_version}); \
    else git clone -b ${mariadb_version} --depth 1 https://github.com/mariadb/server ${mariadb_version}; \
   fi \
  ) && \
