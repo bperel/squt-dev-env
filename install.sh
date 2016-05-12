@@ -15,19 +15,31 @@ touch /home/vagrant/.bash_profile && \
  fi \
 ) && \
 \
-# Adding package sources for NodeJS and Java 8. The NodeJS script executes apt-get update as well
-curl -sL https://deb.nodesource.com/setup_4.x | bash - && \
+# Adding package sources for Java 8
 echo 'oracle-java8-installer shared/accepted-oracle-license-v1-1 boolean true' | debconf-set-selections && \
 ( \
  if [ ! -f /etc/apt/sources.list.d/webupd8team-java.list ]; then \
-  printf 'deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main\n\ndeb-src http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main' >> /etc/apt/sources.list.d/webupd8team-java.list; \
+  printf 'deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main\n\ndeb-src http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main' > /etc/apt/sources.list.d/webupd8team-java.list; \
  fi \
 ) && \
+# Adding package sources for GCC 4.8
+( \
+ if ! grep --quiet "jessie for gcc 4.8" /etc/apt/sources.list; then \
+	printf '\n\n# jessie for gcc 4.8\ndeb http://ftp.uk.debian.org/debian/ jessie main non-free contrib' >> /etc/apt/sources.list; \
+ fi \
+) && \
+# Adding package sources and install NodeJS. The install script executes apt-get update as well
+curl -sL https://deb.nodesource.com/setup_4.x | bash - && \
 # Installing NodeJS
 apt-get -y install nodejs && \
 \
-# Installing node-mariasql and dependencies
-apt-get -y install gcc g++ libncurses5-dev bison clang && \
+# Installing node-mariasql and dependencies - GCC/G++
+apt-get -y install -t jessie gcc-4.8 g++-4.8 && \
+update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 50 && \
+update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8 50 && \
+\
+# Installing node-mariasql and dependencies - other dependencies
+apt-get -y install libncurses5-dev bison clang && \
 (mkdir -p /home/vagrant/Documents/workspace && cd $_ && \
  ( \
   if [ -d node-mariasql ]; \
