@@ -5,7 +5,13 @@ su - vagrant
 
 export DEBIAN_FRONTEND=noninteractive
 
-clion_version=CLion-2016.1-1
+clion_version=CLion-2016.1.1
+clion_dirname=clion-2016.1.1
+webstorm_version=WebStorm-2016.1.2
+webstorm_dirname=WebStorm-145.971.23
+
+node_version=4.4.4
+node_dirname=node-v${node_version}
 ide_archive_location=/home/vagrant/ide-archive
 
 touch /home/vagrant/.bash_profile && \
@@ -24,23 +30,32 @@ echo 'oracle-java8-installer shared/accepted-oracle-license-v1-1 boolean true' |
 ) && \
 # Adding package sources for GCC 4.8
 ( \
- if ! grep --quiet "jessie for gcc 4.8" /etc/apt/sources.list; then \
-	printf '\n\n# jessie for gcc 4.8\ndeb http://ftp.uk.debian.org/debian/ jessie main non-free contrib' >> /etc/apt/sources.list; \
- fi \
+ ( \
+  if ! grep --quiet "jessie for gcc 4.8" /etc/apt/sources.list; then \
+	 printf '\n\n# jessie for gcc 4.8\ndeb http://ftp.uk.debian.org/debian/ jessie main non-free contrib\n' >> /etc/apt/sources.list; \
+  fi \
+ ) \
 ) && \
-# Adding package sources and install NodeJS. The install script executes apt-get update as well
-curl -sL https://deb.nodesource.com/setup_4.x | bash - && \
-# Installing NodeJS
-apt-get -y install nodejs && \
 \
 # Installing node-mariasql and dependencies - GCC/G++
 apt-get -y install -t jessie gcc-4.8 g++-4.8 && \
 update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 50 && \
 update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8 50 && \
 \
-# Installing node-mariasql and dependencies - other dependencies
+# Installing node-mariasql and dependencies - NodeJS and related dependencies
 apt-get -y install libncurses5-dev bison clang && \
 (mkdir -p /home/vagrant/Documents/workspace && cd $_ && \
+ (
+  if [ ! -d ${node_dirname} ]; \
+   then ( \
+    wget http://nodejs.org/dist/v${node_version}/${node_dirname}.tar.gz && \
+    tar -xzf ${node_dirname}.tar.gz && \
+    cd ${node_dirname} && \
+    ./configure --debug && make && make install && \
+    npm install node-gyp \
+   ); \
+   fi \
+ ) && \
  ( \
   if [ -d node-mariasql ]; \
    then (cd node-mariasql && git pull); \
@@ -58,7 +73,7 @@ apt-get -y install libncurses5-dev bison clang && \
  # Installing MariaSQL and dependencies, suppressing the warning issued by dch
  ( \
   if [ -d ${mariadb_version} ]; \
-   then (`pwd` && cd ${mariadb_version} && git pull origin ${mariadb_version}); \
+   then (cd ${mariadb_version} && git pull origin ${mariadb_version}); \
    else git clone -b ${mariadb_version} --depth 1 https://github.com/mariadb/server ${mariadb_version}; \
   fi \
  ) && \
@@ -85,18 +100,30 @@ apt-get -y --force-yes install oracle-java8-installer && \
 apt-get -y upgrade && \
 apt-get -y autoremove && \
 \
-# Downloading and extracting CLion
-(if [ ! -d ${clion_version} ]; \
+# Use the cached IDE archives if available
+# Downloading (if not cached) and extracting CLion
+(if [ ! -d ${clion_dirname} ]; \
  then ( \
   ( \
-   mv ${ide_archive_location}/* . 2>/dev/null &&
-   if [ ! -f ${clion_version}.tar.gz ]; \
-	  then wget https://download.jetbrains.com/cpp/${clion_version}.tar.gz
+   if [ ! -f ${ide_archive_location}/${clion_version}.tar.gz ]; \
+	  then wget -O ${ide_archive_location}/${clion_version}.tar.gz https://download.jetbrains.com/cpp/${clion_version}.tar.gz
 	 fi \
 	) && \
-	tar -xvzf ${clion_version}.tar.gz && \
-	chown vagrant:vagrant ${clion_version} && \
-	rm ${clion_version}.tar.gz; \
+	tar -xzf ${ide_archive_location}/${clion_version}.tar.gz && \
+	chown vagrant:vagrant ${clion_dirname} \
+ ); \
+fi  \
+) && \
+# Downloading (if not cached) and extracting Webstorm
+(if [ ! -d ${webstorm_dirname} ]; \
+ then ( \
+  ( \
+   if [ ! -f ${ide_archive_location}/${webstorm_version}.tar.gz ]; \
+	  then wget -O ${webstorm_version}.tar.gz https://download.jetbrains.com/webstorm/${webstorm_version}.tar.gz
+	 fi \
+	) && \
+	tar -xzf ${ide_archive_location}/${webstorm_version}.tar.gz && \
+	chown vagrant:vagrant ${webstorm_dirname} \
  ); \
 fi  \
 )
