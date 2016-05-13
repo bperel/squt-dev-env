@@ -44,8 +44,9 @@ update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8 50 && \
 \
 # Installing node-mariasql and dependencies - NodeJS and related dependencies
 apt-get -y install libncurses5-dev bison clang && \
-(mkdir -p /home/vagrant/Documents/workspace && cd $_ && \
- (
+( \
+ mkdir -p /home/vagrant/Documents/workspace && cd $_ && \
+ ( \
   if [ ! -d ${node_dirname} ]; \
    then ( \
     wget http://nodejs.org/dist/v${node_version}/${node_dirname}.tar.gz && \
@@ -70,14 +71,14 @@ apt-get -y install libncurses5-dev bison clang && \
  \
  # Installing MariaSQL's dependencies
  apt-get -y install cmake zlib1g-dev libjemalloc-dev chrpath dh-apparmor dpatch libaio-dev libboost-dev libjudy-dev libpam0g-dev libreadline-gplv2-dev libssl-dev libwrap0-dev gawk hardening-wrapper devscripts && \
- # Installing MariaSQL and dependencies, suppressing the warning issued by dch
+ # Installing MariaSQL, suppressing the warning issued by dch
  ( \
   if [ -d ${mariadb_version} ]; \
    then (cd ${mariadb_version} && git pull origin ${mariadb_version}); \
    else git clone -b ${mariadb_version} --depth 1 https://github.com/mariadb/server ${mariadb_version}; \
   fi \
  ) && \
- chown vagrant:vagrant -R ${mariadb_version}
+ chown vagrant:vagrant -R ${mariadb_version} && \
  (cd ${mariadb_version} && \
   ( \
    if [ ! -f debian/autobake-deb-force-distribution.sh ]; \
@@ -85,8 +86,8 @@ apt-get -y install libncurses5-dev bison clang && \
    fi \
   ) && \
   chmod +x debian/autobake-deb-force-distribution.sh && \
-  debian/autobake-deb-force-distribution.sh
- )
+  debian/autobake-deb-force-distribution.sh \
+ ) \
 ) && \
 \
 # Installing desktop environment
@@ -106,7 +107,7 @@ apt-get -y autoremove && \
  then ( \
   ( \
    if [ ! -f ${ide_archive_location}/${clion_version}.tar.gz ]; \
-	  then wget -O ${ide_archive_location}/${clion_version}.tar.gz https://download.jetbrains.com/cpp/${clion_version}.tar.gz
+	  then wget -O ${ide_archive_location}/${clion_version}.tar.gz https://download.jetbrains.com/cpp/${clion_version}.tar.gz; \
 	 fi \
 	) && \
 	tar -xzf ${ide_archive_location}/${clion_version}.tar.gz && \
@@ -119,7 +120,7 @@ fi  \
  then ( \
   ( \
    if [ ! -f ${ide_archive_location}/${webstorm_version}.tar.gz ]; \
-	  then wget -O ${webstorm_version}.tar.gz https://download.jetbrains.com/webstorm/${webstorm_version}.tar.gz
+	  then wget -O ${webstorm_version}.tar.gz https://download.jetbrains.com/webstorm/${webstorm_version}.tar.gz; \
 	 fi \
 	) && \
 	tar -xzf ${ide_archive_location}/${webstorm_version}.tar.gz && \
