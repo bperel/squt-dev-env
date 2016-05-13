@@ -111,7 +111,7 @@ apt-get -y autoremove && \
 	 fi \
 	) && \
 	tar -xzf ${ide_archive_location}/${clion_version}.tar.gz && \
-	chown vagrant:vagrant ${clion_dirname} \
+	chown -R vagrant:vagrant ${clion_dirname} \
  ); \
 fi  \
 ) && \
@@ -124,7 +124,7 @@ fi  \
 	 fi \
 	) && \
 	tar -xzf ${ide_archive_location}/${webstorm_version}.tar.gz && \
-	chown vagrant:vagrant ${webstorm_dirname} \
+	chown -R vagrant:vagrant ${webstorm_dirname} \
  ); \
 fi  \
 )
