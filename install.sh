@@ -37,6 +37,8 @@ echo 'oracle-java8-installer shared/accepted-oracle-license-v1-1 boolean true' |
  ) \
 ) && \
 \
+apt-get update && \
+
 # Installing node-mariasql and dependencies - GCC/G++
 apt-get -y install -t jessie gcc-4.8 g++-4.8 && \
 update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 50 && \
