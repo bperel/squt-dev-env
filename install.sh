@@ -94,6 +94,7 @@ apt-get -y install libncurses5-dev bison clang && \
 \
 # Installing desktop environment
 apt-get -y install gnome-desktop-environment gedit && \
+gsettings set org.gnome.desktop.background show-desktop-icons true && \
 \
 # Installing Java 8 and other CLion dependencies
 echo debconf shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-selections && \
