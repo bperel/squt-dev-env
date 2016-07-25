@@ -2,6 +2,7 @@
   <component name="FileBasedIndex">
     <option name="registeredIndices">
       <list>
+        <option value="Css.custom.property" />
         <option value="Css.attr" />
         <option value="Css.id" />
         <option value="Css.class" />

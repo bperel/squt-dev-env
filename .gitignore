@@ -3,3 +3,12 @@
 
 ### IDE TGZs
 ide-archive/*.tar.gz
+
+### IDE plugin release notes
+.CLion15/config/plugins/availables.xml
+
+### IDE cache
+.CLion15/*
+!.CLion15/system
+.CLion15/system/*
+!.CLion15/system/.home

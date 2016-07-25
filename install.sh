@@ -5,12 +5,14 @@ su - vagrant
 
 export DEBIAN_FRONTEND=noninteractive
 
-clion_version=CLion-2016.1.1
-clion_dirname=clion-2016.1.1
-webstorm_version=WebStorm-2016.1.2
-webstorm_dirname=WebStorm-145.971.23
+clion_version=CLion-2016.2
+clion_dirname=clion-2016.2
+clion_download_url=https://download.jetbrains.com/cpp/${clion_version}.tar.gz
+webstorm_version=WebStorm-2016.2
+webstorm_dirname=WebStorm-162.1121.31
+webstorm_download_url=https://download.jetbrains.com/webstorm/${webstorm_version}.tar.gz
 
-node_version=4.4.4
+node_version=4.4.7
 node_dirname=node-v${node_version}
 ide_archive_location=/home/vagrant/ide-archive
 
@@ -102,7 +104,7 @@ echo debconf shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-
 apt-get -y install python-software-properties && \
 apt-get -y --force-yes install oracle-java8-installer && \
 # Cleaning up
-apt-get -y upgrade && \
+apt-get -y --force-yes upgrade && \
 apt-get -y autoremove && \
 \
 # Use the cached IDE archives if available
@@ -111,7 +113,10 @@ apt-get -y autoremove && \
  then ( \
   ( \
    if [ ! -f ${ide_archive_location}/${clion_version}.tar.gz ]; \
-	  then wget -O ${ide_archive_location}/${clion_version}.tar.gz https://download.jetbrains.com/cpp/${clion_version}.tar.gz; \
+	  then ( \
+	  	echo "Downloading CLion from $clion_download_url" && \
+	  	wget --no-check-certificate -O ${ide_archive_location}/${clion_version}.tar.gz ${clion_download_url}; \
+		);
 	 fi \
 	) && \
 	tar -xzf ${ide_archive_location}/${clion_version}.tar.gz && \
@@ -124,7 +129,10 @@ fi  \
  then ( \
   ( \
    if [ ! -f ${ide_archive_location}/${webstorm_version}.tar.gz ]; \
-	  then wget -O ${webstorm_version}.tar.gz https://download.jetbrains.com/webstorm/${webstorm_version}.tar.gz; \
+	  then ( \
+	  	echo "Downloading Webstorm from $webstorm_download_url" && \
+	  	wget --no-check-certificate -O ${ide_archive_location}/${webstorm_version}.tar.gz ${webstorm_download_url}; \
+		);
 	 fi \
 	) && \
 	tar -xzf ${ide_archive_location}/${webstorm_version}.tar.gz && \
