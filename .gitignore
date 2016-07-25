@@ -9,6 +9,17 @@ ide-archive/*.tar.gz
 
 ### IDE cache
 .CLion15/*
+!.CLion15/config
+!.CLion15/config/port
+!.CLion15/config/port.lock
 !.CLion15/system
 .CLion15/system/*
 !.CLion15/system/.home
+
+.WebStorm2016.2/*
+!.WebStorm2016.2/config
+.WebStorm2016.2/config/port
+.WebStorm2016.2/config/port.lock
+!.WebStorm2016.2/system
+.WebStorm2016.2/system/*
+!.WebStorm2016.2/system/.home

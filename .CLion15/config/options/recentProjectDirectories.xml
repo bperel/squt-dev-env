@@ -1,0 +1,25 @@
+<application>
+  <component name="RecentDirectoryProjectsManager">
+    <option name="recentPaths">
+      <list>
+        <option value="$USER_HOME$/Documents/workspace/mariadb-10.1.8" />
+      </list>
+    </option>
+    <option name="lastPath" value="$USER_HOME$/Documents/workspace/mariadb-10.1.8" />
+    <option name="additionalInfo">
+      <map>
+        <entry key="$USER_HOME$/Documents/workspace/mariadb-10.1.8">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="CL-162.1236.16" />
+              <option name="productionCode" value="CL" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1469455543406" />
+              <option name="buildTimestamp" value="1468800000000" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</application>
