@@ -67,6 +67,9 @@ apt-get -y install libncurses5-dev bison clang && \
    else git clone https://github.com/bperel/node-mariasql.git; \
   fi \
  ) && \
+ ( \
+    cd node-mariasql && npm install \
+ ) && \
  chown vagrant:vagrant -R node-mariasql && \
  (cd node-mariasql && npm install) && \
  \
