@@ -18,7 +18,12 @@ ide-archive/*.tar.gz
 
 .WebStorm2016.2/*
 !.WebStorm2016.2/config
+.WebStorm2016.2/config/eval
+.WebStorm2016.2/config/options/abbreviations.xml
+.WebStorm2016.2/config/options/proxy.settings.pwd
+.WebStorm2016.2/config/options/updates.xml
 .WebStorm2016.2/config/port
+.WebStorm2016.2/config/tasks
 .WebStorm2016.2/config/port.lock
 !.WebStorm2016.2/system
 .WebStorm2016.2/system/*

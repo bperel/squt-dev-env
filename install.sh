@@ -8,8 +8,8 @@ export DEBIAN_FRONTEND=noninteractive
 clion_version=CLion-2016.2
 clion_dirname=clion-2016.2
 clion_download_url=https://download.jetbrains.com/cpp/${clion_version}.tar.gz
-webstorm_version=WebStorm-2016.2
-webstorm_dirname=WebStorm-162.1121.31
+webstorm_version=WebStorm-2016.2.1
+webstorm_dirname=WebStorm-162.1447.27
 webstorm_download_url=https://download.jetbrains.com/webstorm/${webstorm_version}.tar.gz
 
 node_version=4.4.7
